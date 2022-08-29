@@ -1,16 +1,16 @@
 'use strict'
-const button = document.getElementById("output");
-const fizzbuzzList = document.getElementById("fizzbuzzList");
+const button = document.getElementById('output');
+const fizzbuzzList = document.getElementById('fizzbuzzList');
 
-const listAdd = (i) => {
-  const li = document.createElement("li");
-  li.innerHTML = i;
+const listAdd = (addData) => {
+  const li = document.createElement('li');
+  li.innerHTML = addData;
   fizzbuzzList.appendChild(li);
 };
 
-button.addEventListener("click", () => {
-  let fizzNum = Number(document.getElementById("fizzNum").value);
-  let buzzNum = Number(document.getElementById("buzzNum").value);
+button.addEventListener('click', () => {
+  const fizzNum = Number(document.getElementById('fizzNum').value);
+  const buzzNum = Number(document.getElementById('buzzNum').value);
 
   if (
     Number.isInteger(fizzNum) &&
@@ -28,6 +28,6 @@ button.addEventListener("click", () => {
       }
     }
   } else {
-    listAdd("整数値を入力してください");
+    listAdd('整数値を入力してください');
   }
 });
